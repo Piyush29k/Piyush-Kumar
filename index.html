@@ -286,6 +286,36 @@
 
 
 
+<script>
+  const menuIcon = document.querySelector('#menu-icon');
+  const navLinks = document.querySelector('.nav-links');
+
+  
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+      navLinks.classList.remove('active');
+    }
+  });
+
+  
+  document.addEventListener('touchstart', (e) => {
+    if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+      navLinks.classList.remove('active');
+    }
+  });
+</script>
 
     <script src="script.js"></script>
 </body>
