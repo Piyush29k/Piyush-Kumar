@@ -728,7 +728,7 @@ footer p {
     margin: 1.5rem 0;
   }
 
-  .home {
+  .home.home-container {
     padding: 6rem 5% 2rem;
     flex-direction: column-reverse;
     text-align: center;
