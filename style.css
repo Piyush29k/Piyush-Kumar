@@ -38,8 +38,9 @@ header{
     
 }
 .nav-links{
-    display: flex; /*error */
-    gap: 2rem;
+    display: flex;
+    gap :1rem;
+   
 }
 li a{
     position:relative;
@@ -143,7 +144,7 @@ section{
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-   background: (255, 255, 255, 0.25);
+   background: rgba(255, 255, 255, 0.25);
 }
 
 .about-image img {
@@ -211,12 +212,12 @@ section{
     display: flex;
     gap: 2rem;
 }
-.social.i{
+.social i{
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-.social.i:hover{
+.social i:hover{
     transform: scale(1.03);
 }
 /*---------------------------------------------------------------------*/
@@ -682,19 +683,23 @@ footer p {
 @media (max-width: 768px) {
   header {
     gap:1rem;
-    padding: 1rem 1rem
+    padding: 2rem 2rem
   }
   header.logo{
     font-size: 1rem;
   }
   header .visit-btn{
     display: none;
+  
+  }
+  .about-container{
+    flex-direction: column;
   }
   #menu-icon {
     display: block;
   }
 
-  .navbar {
+  .nav-links {
     position: absolute;
     top: 100%;
     left: -100%;
@@ -705,12 +710,14 @@ footer p {
     transition: 0.3s ease;
   }
 
-  .navbar.active {
-    left: 0;
+  .nav-links.active {
+    left:0;
   }
 
-  .navbar a {
-    margin: 1.5rem 0;
+  .nav-links a {
+    margin: 1.5 rem 0;
+    left: -100%;
+    transition: left 0.3s ease;
   }
 
   .home.home-container {
@@ -752,5 +759,53 @@ footer p {
   .cert-link {
     font-size: 0.85rem;
     padding: 6px 12px;
+  }
+}
+@media(max-width:600px)
+{
+  header #menu-icon{
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    top:100%;
+    margin-top:1rem;
+    width:100%;
+    padding:1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 3rem;
+  }
+  .nav-links li{
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  .nav-links.active{
+    display: block;
+
+  }
+  header{
+    padding: 1rem 5rem;
+    gap: 8rem;
+  }
+  header.logo{
+    font-size: 1.5rem;
+  }
+  .about-container img{
+    width: 80vw
+  }
+  .input-box input{
+    padding: 0.5rem 3rem;
+    width:80%;
+    font-size: 1.5rem; 
+  }
+  .input-box input::placeholder{
+    font-size: 1.5rem;
+  }
+  footer ul{
+    gap: 1rem;
   }
 }
