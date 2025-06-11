@@ -43,17 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
-const menuIcon = document.querySelector(".menu-icon");
-const navlinks = document.querySelector(".nav-links");
-
-menuIcon.onclick = () => {
-  navlinks.classList.toggle("active");
-};
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navlinks.classList.remove("active");
-  });
-});
-
 
