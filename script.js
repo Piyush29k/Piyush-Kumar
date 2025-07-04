@@ -1,5 +1,6 @@
 const roles = [
-  "Software Engineer.",
+  "Software Engineer.", 
+  
   "Web Developer.",
   "Full Stack Developer.",
   "UI/UX Designer.",
