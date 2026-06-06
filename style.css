@@ -942,6 +942,8 @@ footer p {
   color: #fff;
 }
 
+
+
 /* ===== Skill Explanation Modal ===== */
 .skill-modal {
   position: fixed;
@@ -1109,5 +1111,80 @@ footer p {
 
     .footer-social{
         margin-top:1rem;
+    }
+}
+.contact {
+    min-height: 100vh;
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h2 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.contact-card i {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.email-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 50px;
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contact-card {
+        width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    .email-box {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    .email-box {
+        font-size: 1rem;
+        border-radius: 30px;
     }
 }
